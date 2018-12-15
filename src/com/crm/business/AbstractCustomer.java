@@ -1,19 +1,16 @@
 package com.crm.business;
 
-public class Customer implements CustomerInterface {
+public abstract class AbstractCustomer extends Customer {
 
     private int Id;
     private String salutation;
     private String surname;
     private String prename;
-    private CustomerContact[] contacts;
 
-
-    public Customer() {
-
+    public AbstractCustomer() {
     }
 
-    public Customer(int id, String salutation, String surname, String prename) {
+    public AbstractCustomer(int id, String salutation, String surname, String prename) {
         Id = id;
         this.salutation = salutation;
         this.surname = surname;
@@ -50,9 +47,5 @@ public class Customer implements CustomerInterface {
 
     public void setPrename(String prename) {
         this.prename = prename;
-    }
-
-    public String getDisplayName(){
-        return this.getSalutation() + " " + this.getPrename() + " " + this.getSurname();
     }
 }
