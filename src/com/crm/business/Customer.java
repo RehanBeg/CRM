@@ -20,6 +20,10 @@ public class Customer implements ICustomer {
         this.prename = prename;
     }
 
+    public Customer(Address address) {
+        this.address = address;
+    }
+
     public int getId() {
         return Id;
     }
@@ -55,6 +59,8 @@ public class Customer implements ICustomer {
     public String getDisplayName(){
         return this.getSalutation() + " " + this.getPrename() + " " + this.getSurname();
     }
+
+    public Address getAddress() { return address; }
 
     public void setAddress(Address address) {this.address = address;}
 }

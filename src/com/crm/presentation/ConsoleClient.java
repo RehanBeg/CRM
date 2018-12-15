@@ -1,5 +1,6 @@
 package com.crm.presentation;
 
+import com.crm.business.Address;
 import com.crm.business.CustomerFactory;
 import com.crm.business.ICustomer;
 
@@ -7,6 +8,8 @@ public class ConsoleClient {
     public static void main(String[] args){
         addCustomer("Herr","Rehan", "Mirza");
         showCustomer("Herr", "Michael", "Müller");
+        //showAddresses();
+
         //showCustomers();
     }
 
@@ -27,5 +30,12 @@ public class ConsoleClient {
         ICustomer customer2 = factory.showCustomer(salutation, firstName, lastName);
 
         System.out.println(customer2.getDisplayName());
+    }
+
+    private void showAddresses(Address address) {
+        CustomerFactory factory = CustomerFactory.getInstance();
+        ICustomer customerAddress = factory.showAddresses(address);
+
+        System.out.println(customerAddress.getAddress());
     }
 }

@@ -21,4 +21,9 @@ public class CustomerFactory {
         Customer customer = new Customer(0, salutation, firstname, lastname);
         return customer;
     }
+
+    public ICustomer showAddresses(Address address) {
+        Customer customer = new Customer(address);
+        return customer;
+    }
 }

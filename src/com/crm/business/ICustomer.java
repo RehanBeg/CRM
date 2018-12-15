@@ -15,5 +15,7 @@ public interface ICustomer {
 
     public String getDisplayName();
 
+    public Address getAddress();
+
     public void setAddress(Address address);
 }
