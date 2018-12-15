@@ -10,7 +10,6 @@ public class CustomerContact {
     private List<String> emailAddress;
     private Address[] addresses;
 
-
     public List<String> getTelephoneNumbers(){
         return this.telephoneNumbers;
     }

@@ -14,4 +14,6 @@ public interface ICustomer {
     public void setSalutation(String salutation);
 
     public String getDisplayName();
+
+    public void setAddress(Address address);
 }

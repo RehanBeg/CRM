@@ -7,6 +7,7 @@ public class Customer implements ICustomer {
     private String surname;
     private String prename;
     private CustomerContact[] contacts;
+    private Address address;
 
     public Customer() {
 
@@ -54,4 +55,6 @@ public class Customer implements ICustomer {
     public String getDisplayName(){
         return this.getSalutation() + " " + this.getPrename() + " " + this.getSurname();
     }
+
+    public void setAddress(Address address) {this.address = address;}
 }
