@@ -1,6 +1,6 @@
 package com.crm.business;
 
-public interface CustomerInterface {
+public interface ICustomer {
     public int getId();
 
     public void setId(int id);

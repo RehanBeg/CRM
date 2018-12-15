@@ -1,13 +1,12 @@
 package com.crm.business;
 
-public class Customer implements CustomerInterface {
+public class Customer implements ICustomer {
 
     private int Id;
     private String salutation;
     private String surname;
     private String prename;
     private CustomerContact[] contacts;
-
 
     public Customer() {
 

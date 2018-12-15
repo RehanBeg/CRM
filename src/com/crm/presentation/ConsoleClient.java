@@ -1,13 +1,14 @@
 package com.crm.presentation;
 
 import com.crm.business.CustomerFactory;
-import com.crm.business.CustomerInterface;
+import com.crm.business.ICustomer;
 
 public class ConsoleClient {
     public static void main(String[] args){
         addCustomer("Herr","Rehan", "Mirza");
+        showCustomer("Herr", "Michael", "Müller");
+        //showCustomers();
     }
-
 
 //    public void displayCustomer() {
 //        System.out.println("Customer: firstname=" + customer.getFirstName() + " lastname=" + customer.getLastName());
@@ -16,8 +17,15 @@ public class ConsoleClient {
 
     private static void addCustomer(String salutation, String firstName, String lastName) {
         CustomerFactory factory = CustomerFactory.getInstance();
-        CustomerInterface customer1 = factory.createCustomer(salutation, firstName, lastName);
+        ICustomer customer1 = factory.createCustomer(salutation, firstName, lastName);
 
         System.out.println(String.format("Kunde %s erstellt", customer1.getDisplayName()));
+    }
+
+    private static void showCustomer(String salutation, String firstName, String lastName) {
+        CustomerFactory factory = CustomerFactory.getInstance();
+        ICustomer customer2 = factory.showCustomer(salutation, firstName, lastName);
+
+        System.out.println(customer2.getDisplayName());
     }
 }
