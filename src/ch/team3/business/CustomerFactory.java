@@ -1,5 +1,8 @@
 package ch.team3.business;
 
+import ch.team3.persistence.CustomerDAOFactory;
+import ch.team3.persistence.CustomerDAOIf;
+
 public class CustomerFactory {
 
     private static CustomerFactory setInstance = new CustomerFactory();
@@ -22,8 +25,10 @@ public class CustomerFactory {
         return customer;
     }
 
-    public ICustomer showAddresses(Address address) {
-        Customer customer = new Customer(address);
-        return customer;
+    public CustomerDAOIf saveCustomer(String salutation, String firstname, String lastname) {
+        CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
+        daoFactory.saveCustomer(salutation, firstname, lastname);
+        return daoFactory;
     }
+
 }

@@ -5,17 +5,20 @@ public interface ICustomer {
 
     public void setId(int id);
 
-    public String getPrename();
-
-    public void setPrename(String prename);
-
     public String getSalutation();
 
     public void setSalutation(String salutation);
 
+    public String getFirstName();
+
+    public void setFirstName(String firstName);
+
+    public String getLastName();
+
+    public void setLastName(String lastName);
+
     public String getDisplayName();
 
-    public Address getAddress();
+    //public void setDisplayName()
 
-    public void setAddress(Address address);
 }

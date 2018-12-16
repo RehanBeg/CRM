@@ -1,28 +1,26 @@
 package ch.team3.presentation;
 
 import ch.team3.business.ICustomer;
-import ch.team3.business.Address;
 import ch.team3.business.CustomerFactory;
+import ch.team3.persistence.CustomerDAOIf;
 
 public class ConsoleClient {
     public static void main(String[] args){
         addCustomer("Herr","Rehan", "Mirza");
-        showCustomer("Herr", "Michael", "Müller");
-        //showAddresses();
-
-        //showCustomers();
+        addCustomer("Herr","Dominic", "Wüthrich");
+        //showCustomer("Herr", "Michael", "Müller");
     }
-
-//    public void displayCustomer() {
-//        System.out.println("Customer: firstname=" + customer.getFirstName() + " lastname=" + customer.getLastName());
-//        konkret.lokaleMethode();
-//    }
 
     private static void addCustomer(String salutation, String firstName, String lastName) {
         CustomerFactory factory = CustomerFactory.getInstance();
-        ICustomer customer1 = factory.createCustomer(salutation, firstName, lastName);
+        ICustomer customer = factory.createCustomer(salutation, firstName, lastName);
+        System.out.println(String.format("%nKunde %s erstellt%n", customer.getDisplayName()));
 
-        System.out.println(String.format("Kunde %s erstellt", customer1.getDisplayName()));
+        CustomerDAOIf customerDao = factory.saveCustomer(salutation, firstName, lastName);
+        System.out.println(String.format("Abgespeicherte Kunden: %n%s", customerDao.getCustomers()));
+        System.out.println(String.format("---------------------------------"));
+
+        //System.out.println(String.format("Kunde %s gespeichert", customer1.getDisplayName()));
     }
 
     private static void showCustomer(String salutation, String firstName, String lastName) {
@@ -32,10 +30,9 @@ public class ConsoleClient {
         System.out.println(customer2.getDisplayName());
     }
 
-    private void showAddresses(Address address) {
-        CustomerFactory factory = CustomerFactory.getInstance();
-        ICustomer customerAddress = factory.showAddresses(address);
+//    public void displayCustomer() {
+//        System.out.println("Customer: firstname=" + customer.getFirstName() + " lastname=" + customer.getLastName());
+//        konkret.lokaleMethode();
+//    }
 
-        System.out.println(customerAddress.getAddress());
-    }
 }

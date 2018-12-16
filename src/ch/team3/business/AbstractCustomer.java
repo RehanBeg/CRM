@@ -4,17 +4,17 @@ public abstract class AbstractCustomer extends Customer {
 
     private int Id;
     private String salutation;
-    private String surname;
-    private String prename;
+    private String firstname;
+    private String lastname;
 
     public AbstractCustomer() {
     }
 
-    public AbstractCustomer(int id, String salutation, String surname, String prename) {
+    public AbstractCustomer(int id, String salutation, String firstname, String lastname) {
         Id = id;
         this.salutation = salutation;
-        this.surname = surname;
-        this.prename = prename;
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     public int getId() {
@@ -33,19 +33,19 @@ public abstract class AbstractCustomer extends Customer {
         this.salutation = salutation;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getFirstName() {
+        return firstname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setFirstName(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getPrename() {
-        return prename;
+    public String getLastName() {
+        return lastname;
     }
 
-    public void setPrename(String prename) {
-        this.prename = prename;
+    public void setLastName(String lastname) {
+        this.lastname = lastname;
     }
 }
