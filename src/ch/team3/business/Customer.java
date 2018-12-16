@@ -1,20 +1,27 @@
-package com.crm.business;
+package ch.team3.business;
 
-public abstract class AbstractCustomer extends Customer {
+public class Customer implements ICustomer {
 
     private int Id;
     private String salutation;
     private String surname;
     private String prename;
+    private CustomerContact[] contacts;
+    private Address address;
 
-    public AbstractCustomer() {
+    public Customer() {
+
     }
 
-    public AbstractCustomer(int id, String salutation, String surname, String prename) {
+    public Customer(int id, String salutation, String surname, String prename) {
         Id = id;
         this.salutation = salutation;
         this.surname = surname;
         this.prename = prename;
+    }
+
+    public Customer(Address address) {
+        this.address = address;
     }
 
     public int getId() {
@@ -48,4 +55,12 @@ public abstract class AbstractCustomer extends Customer {
     public void setPrename(String prename) {
         this.prename = prename;
     }
+
+    public String getDisplayName(){
+        return this.getSalutation() + " " + this.getPrename() + " " + this.getSurname();
+    }
+
+    public Address getAddress() { return address; }
+
+    public void setAddress(Address address) {this.address = address;}
 }

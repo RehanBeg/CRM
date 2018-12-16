@@ -1,4 +1,4 @@
-package com.crm.business;
+package ch.team3.business;
 
 public interface ICustomer {
     public int getId();

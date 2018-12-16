@@ -1,4 +1,4 @@
-package com.crm.business;
+package ch.team3.business;
 
 import java.util.List;
 

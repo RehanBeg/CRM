@@ -1,4 +1,4 @@
-package com.crm.persistence;
+package ch.team3.persistence;
 
 public class CustomerDAOFactory implements CustomerDAOIf {
 

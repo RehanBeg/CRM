@@ -1,8 +1,8 @@
-package com.crm.presentation;
+package ch.team3.presentation;
 
-import com.crm.business.Address;
-import com.crm.business.CustomerFactory;
-import com.crm.business.ICustomer;
+import ch.team3.business.ICustomer;
+import ch.team3.business.Address;
+import ch.team3.business.CustomerFactory;
 
 public class ConsoleClient {
     public static void main(String[] args){
