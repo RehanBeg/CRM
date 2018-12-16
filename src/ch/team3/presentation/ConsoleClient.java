@@ -8,6 +8,7 @@ public class ConsoleClient {
     public static void main(String[] args){
         addCustomer("Herr","Rehan", "Mirza");
         addCustomer("Herr","Dominic", "Wüthrich");
+        addCustomer("Frau","Sandra", "Bullrock");
         //showCustomer("Herr", "Michael", "Müller");
     }
 
