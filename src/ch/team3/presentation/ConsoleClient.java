@@ -9,31 +9,21 @@ public class ConsoleClient {
         addCustomer("Herr","Rehan", "Mirza");
         addCustomer("Herr","Dominic", "Wüthrich");
         addCustomer("Frau","Sandra", "Bullrock");
-        //showCustomer("Herr", "Michael", "Müller");
+        showCustomer();
     }
 
     private static void addCustomer(String salutation, String firstName, String lastName) {
         CustomerFactory factory = CustomerFactory.getInstance();
         ICustomer customer = factory.createCustomer(salutation, firstName, lastName);
         System.out.println(String.format("%nKunde %s erstellt%n", customer.getDisplayName()));
-
         CustomerDAOIf customerDao = factory.saveCustomer(salutation, firstName, lastName);
+    }
+
+    private static void showCustomer() {
+        CustomerFactory factory = CustomerFactory.getInstance();
+        CustomerDAOIf customerDao = factory.showCustomer();
         System.out.println(String.format("Abgespeicherte Kunden: %n%s", customerDao.getCustomers()));
         System.out.println(String.format("---------------------------------"));
-
-        //System.out.println(String.format("Kunde %s gespeichert", customer1.getDisplayName()));
     }
-
-    private static void showCustomer(String salutation, String firstName, String lastName) {
-        CustomerFactory factory = CustomerFactory.getInstance();
-        ICustomer customer2 = factory.showCustomer(salutation, firstName, lastName);
-
-        System.out.println(customer2.getDisplayName());
-    }
-
-//    public void displayCustomer() {
-//        System.out.println("Customer: firstname=" + customer.getFirstName() + " lastname=" + customer.getLastName());
-//        konkret.lokaleMethode();
-//    }
 
 }

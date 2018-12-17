@@ -20,9 +20,9 @@ public class CustomerFactory {
         return customer;
     }
 
-    public ICustomer showCustomer(String salutation, String firstname, String lastname) {
-        Customer customer = new Customer(0, salutation, firstname, lastname);
-        return customer;
+    public CustomerDAOIf showCustomer() {
+        CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
+        return daoFactory;
     }
 
     public CustomerDAOIf saveCustomer(String salutation, String firstname, String lastname) {

@@ -1,6 +1,6 @@
 package ch.team3.business;
 
-public class Customer implements ICustomer {
+public class Customer extends AbstractCustomer {
 
     private int Id;
     private String salutation;

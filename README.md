@@ -14,10 +14,10 @@ Java Projektarbeit von RM & DW
 - [x] Packages korrekt benennen
 - [x] Im ConsoleClient mehrere Kunden erstellen (ohne Benutzereingabe)
 - [x] Die erstellten Benutzer ausgeben
-- [ ] AbstractCustomer korrekt einbinden
+- [x] AbstractCustomer korrekt einbinden
 - [ ] CustomerDAOFactory und CustomerFactory evtl. korrekt miteinander verknüpfen
 - [ ] UnitTesting
-	- [ ] Kunde erstellen 
+	- [ ] Kunde erstellen
 	- [ ] Kunde anzeigen
 - [ ] In den Java Dateien im Dateikopf dokumentieren
 - [ ] Javadoc erstellen mit den zugehörigen HTML-Dokumentationsseiten
