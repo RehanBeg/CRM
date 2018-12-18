@@ -1,22 +1,45 @@
+/**
+ * Interface for the AbstractCustomer abstract class
+ *
+ * @author Rehan Beg Mirza
+ * @author Dominic Wüthrich
+ */
+
 package ch.team3.business;
 
 public interface ICustomer {
-    public int getId();
 
-    public void setId(int id);
+    /**
+     * Getter and setter for id
+     * @return
+     */
+    int getid();
+    void setid(int id);
 
-    public String getSalutation();
+    /**
+     * Getter and setter for salutation
+     * @return
+     */
+    String getSalutation();
+    void setSalutation(String salutation);
 
-    public void setSalutation(String salutation);
+    /**
+     * Getter and setter for firstname
+     * @return
+     */
+    String getFirstName();
+    void setFirstName(String firstName);
 
-    public String getFirstName();
+    /**
+     * Getter and setter for lastname
+     * @return
+     */
+    String getLastName();
+    void setLastName(String lastName);
 
-    public void setFirstName(String firstName);
-
-    public String getLastName();
-
-    public void setLastName(String lastName);
-
-    public String getDisplayName();
+    /**
+     * Getter to display the customer
+     */
+    String getDisplayName();
 
 }
