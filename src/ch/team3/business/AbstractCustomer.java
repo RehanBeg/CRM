@@ -2,28 +2,20 @@ package ch.team3.business;
 
 public abstract class AbstractCustomer implements ICustomer {
 
-    private int Id;
+    private final int id;
     private String salutation;
     private String firstname;
     private String lastname;
 
-    public AbstractCustomer() {
-
-    }
-
     public AbstractCustomer(int id, String salutation, String firstname, String lastname) {
-        Id = id;
+        this.id = id;
         this.salutation = salutation;
         this.firstname = firstname;
         this.lastname = lastname;
     }
 
     public int getId() {
-        return Id;
-    }
-
-    public void setId(int id) {
-        Id = id;
+        return id;
     }
 
     public String getSalutation() {
@@ -50,7 +42,5 @@ public abstract class AbstractCustomer implements ICustomer {
         this.lastname = lastname;
     }
 
-    public String getDisplayName(){
-        return this.getSalutation() + " " + this.getFirstName() + " " + this.getLastName();
-    }
+    abstract public String getDisplayName();
 }

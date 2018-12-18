@@ -1,22 +1,20 @@
 package ch.team3.business;
 
 public interface ICustomer {
-    public int getId();
+    int getId();
 
-    public void setId(int id);
+    String getSalutation();
 
-    public String getSalutation();
+    void setSalutation(String salutation);
 
-    public void setSalutation(String salutation);
+    String getFirstName();
 
-    public String getFirstName();
+    void setFirstName(String firstName);
 
-    public void setFirstName(String firstName);
+    String getLastName();
 
-    public String getLastName();
+    void setLastName(String lastName);
 
-    public void setLastName(String lastName);
-
-    public String getDisplayName();
+    String getDisplayName();
 
 }

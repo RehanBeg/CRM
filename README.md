@@ -15,7 +15,7 @@ Java Projektarbeit von RM & DW
 - [x] Im ConsoleClient mehrere Kunden erstellen (ohne Benutzereingabe)
 - [x] Die erstellten Benutzer ausgeben
 - [x] AbstractCustomer korrekt einbinden
-- [ ] CustomerDAOFactory und CustomerFactory evtl. korrekt miteinander verknüpfen
+- [x] CustomerDAOFactory und CustomerFactory evtl. korrekt miteinander verknüpfen
 - [ ] UnitTesting
 	- [ ] Kunde erstellen
 	- [ ] Kunde anzeigen

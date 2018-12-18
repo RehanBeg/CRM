@@ -5,29 +5,8 @@ import ch.team3.persistence.CustomerDAOIf;
 
 public class CustomerFactory {
 
-    private static CustomerFactory setInstance = new CustomerFactory();
-
-    public static CustomerFactory getInstance() {
-        return setInstance;
-    }
-
-    private CustomerFactory() {
-
-    }
-
-    public ICustomer createCustomer(String salutation, String firstname, String lastname){
-        Customer customer = new Customer(0, salutation, firstname, lastname);
+    public static ICustomer createCustomer(int id, String salutation, String firstname, String lastname){
+        Customer customer = new Customer(id, salutation, firstname, lastname);
         return customer;
-    }
-
-    public CustomerDAOIf addCustomer(int id, String salutation, String firstname, String lastname) {
-        CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
-        daoFactory.addCustomer(id, salutation, firstname, lastname);
-        return daoFactory;
-    }
-
-    public CustomerDAOIf showCustomer() {
-        CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
-        return daoFactory;
     }
 }
