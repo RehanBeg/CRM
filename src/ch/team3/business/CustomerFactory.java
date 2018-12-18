@@ -20,15 +20,14 @@ public class CustomerFactory {
         return customer;
     }
 
-    public CustomerDAOIf showCustomer() {
-        CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
-        return daoFactory;
-    }
-
     public CustomerDAOIf addCustomer(int id, String salutation, String firstname, String lastname) {
         CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
         daoFactory.addCustomer(id, salutation, firstname, lastname);
         return daoFactory;
     }
 
+    public CustomerDAOIf showCustomer() {
+        CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
+        return daoFactory;
+    }
 }

@@ -16,7 +16,7 @@ public class ConsoleClient {
         CustomerFactory factory = CustomerFactory.getInstance();
         ICustomer customer = factory.createCustomer(salutation, firstName, lastName);
         System.out.println(String.format("%nKunde %s erstellt%n", customer.getDisplayName()));
-        CustomerDAOIf customerDao = factory.addCustomer(id, salutation, firstName, lastName);
+        factory.addCustomer(id, salutation, firstName, lastName);
     }
 
     private static void showCustomer() {
