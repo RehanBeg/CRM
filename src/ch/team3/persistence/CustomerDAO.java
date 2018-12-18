@@ -36,5 +36,4 @@ public class CustomerDAO {
     public List<String> getCustomers() {
         return this.list;
     }
-
 }

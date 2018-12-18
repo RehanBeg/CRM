@@ -49,4 +49,8 @@ public abstract class AbstractCustomer implements ICustomer {
     public void setLastName(String lastname) {
         this.lastname = lastname;
     }
+
+    public String getDisplayName(){
+        return this.getSalutation() + " " + this.getFirstName() + " " + this.getLastName();
+    }
 }

@@ -53,5 +53,4 @@ public class Customer extends AbstractCustomer {
     public String getDisplayName(){
         return this.getSalutation() + " " + this.getFirstName() + " " + this.getLastName();
     }
-
 }

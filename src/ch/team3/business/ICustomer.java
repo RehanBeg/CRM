@@ -19,6 +19,4 @@ public interface ICustomer {
 
     public String getDisplayName();
 
-    //public void setDisplayName()
-
 }
