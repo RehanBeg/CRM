@@ -7,9 +7,11 @@ import ch.team3.persistence.CustomerDAOIf;
 
 public class ConsoleClient {
     public static void main(String[] args){
-        addCustomer(0, "Herr","Rehan", "Mirza");
-        addCustomer(1,"Herr","Dominic", "Wüthrich");
+        System.out.println(String.format("team3_aufgabe3 - Rehan Mirza & Dominic Wüthrich"));
+        addCustomer(0, "Herr","Rudolf", "Leuenberg");
+        addCustomer(1,"Frau","Tina", "Trump");
         addCustomer(2, "Frau","Christine", "Müller");
+        addCustomer(3, "Herr","James", "Bond");
         showCustomer();
     }
 
