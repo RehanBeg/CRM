@@ -25,9 +25,9 @@ public class CustomerFactory {
         return daoFactory;
     }
 
-    public CustomerDAOIf saveCustomer(String salutation, String firstname, String lastname) {
+    public CustomerDAOIf addCustomer(int id, String salutation, String firstname, String lastname) {
         CustomerDAOFactory daoFactory = CustomerDAOFactory.getInstance();
-        daoFactory.saveCustomer(salutation, firstname, lastname);
+        daoFactory.addCustomer(id, salutation, firstname, lastname);
         return daoFactory;
     }
 

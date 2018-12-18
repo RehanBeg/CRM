@@ -6,17 +6,17 @@ import ch.team3.persistence.CustomerDAOIf;
 
 public class ConsoleClient {
     public static void main(String[] args){
-        addCustomer("Herr","Rehan", "Mirza");
-        addCustomer("Herr","Dominic", "Wüthrich");
-        addCustomer("Frau","Sandra", "Bullrock");
+        addCustomer(0, "Herr","Rehan", "Mirza");
+        addCustomer(1,"Herr","Dominic", "Wüthrich");
+        addCustomer(2, "Frau","Christine", "Müller");
         showCustomer();
     }
 
-    private static void addCustomer(String salutation, String firstName, String lastName) {
+    private static void addCustomer(int id, String salutation, String firstName, String lastName) {
         CustomerFactory factory = CustomerFactory.getInstance();
         ICustomer customer = factory.createCustomer(salutation, firstName, lastName);
         System.out.println(String.format("%nKunde %s erstellt%n", customer.getDisplayName()));
-        CustomerDAOIf customerDao = factory.saveCustomer(salutation, firstName, lastName);
+        CustomerDAOIf customerDao = factory.addCustomer(id, salutation, firstName, lastName);
     }
 
     private static void showCustomer() {

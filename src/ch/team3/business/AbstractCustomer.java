@@ -8,6 +8,7 @@ public abstract class AbstractCustomer implements ICustomer {
     private String lastname;
 
     public AbstractCustomer() {
+
     }
 
     public AbstractCustomer(int id, String salutation, String firstname, String lastname) {

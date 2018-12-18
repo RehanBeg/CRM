@@ -11,46 +11,17 @@ public class CustomerDAOFactory implements CustomerDAOIf {
         return setInstance;
     }
 
-    public List<String> list;
-
     private CustomerDAOFactory() {
-        this.list = new ArrayList<String>();
-    }
-
-    public void saveCustomer(String salutation, String firstname, String lastname) {
-        list.add(salutation + " " + firstname + " " + lastname);
 
     }
 
-    public List<String> getCustomers() {
-        return this.list;
+    public void addCustomer(int id, String salutation, String firstname, String lastname) {
+        CustomerDAO customerDao = new CustomerDAO(id, salutation, firstname, lastname);
+        //customerDao.setCustomer(id, salutation, firstname, lastname);
     }
 
-    /*private String firstname = "Nicht definiert";
-    private String lastname = "Nicht definiert";
-
-    @Override
-    public String getFirstName() {
-        return firstname;
+    public List<String> getCustomers(){
+        CustomerDAO customerDao = CustomerDAO.getInstance();
+        return customerDao.getCustomers();
     }
-
-    @Override
-    public String getLastName() {
-        return lastname;
-    }
-
-    @Override
-    public void setFirstName(String firstName) {
-        this.firstname = firstName;
-    }
-
-    @Override
-    public void setLastName(String lastName) {
-        this.lastname = lastName;
-
-    }
-
-    public void lokaleMethode() {
-
-    } */
 }
