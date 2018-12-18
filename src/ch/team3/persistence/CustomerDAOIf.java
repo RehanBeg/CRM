@@ -8,6 +8,4 @@ public interface CustomerDAOIf {
 
     public List<String> getCustomers();
 
-    public void setCustomer(int id, String salutation, String firstname, String lastname);
-
 }

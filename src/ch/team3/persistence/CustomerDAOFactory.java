@@ -16,7 +16,8 @@ public class CustomerDAOFactory implements CustomerDAOIf {
     }
 
     public void addCustomer(int id, String salutation, String firstname, String lastname) {
-        CustomerDAO customerDao = new CustomerDAO(id, salutation, firstname, lastname);
+        CustomerDAO customerDao = CustomerDAO.getInstance();
+        customerDao.addCustomer(id, salutation, firstname, lastname);
     }
 
     public List<String> getCustomers(){
@@ -24,8 +25,4 @@ public class CustomerDAOFactory implements CustomerDAOIf {
         return customerDao.getCustomers();
     }
 
-    public void setCustomer(int id, String salutation, String firstname, String lastname) {
-        CustomerDAO customerDao = CustomerDAO.getInstance();
-        customerDao.setCustomer(id, salutation, firstname, lastname);
-    }
 }
